@@ -39,6 +39,7 @@ public class PokerHands {
                 }
             }
 
+			//此处为调试信息
             //System.out.println();
             System.out.println("white:");
             showArrays(white);
@@ -46,6 +47,9 @@ public class PokerHands {
             System.out.println("black:");
             showArrays(black);
             System.out.println();
+			
+			
+			//结果输出
             int value = tests(black) - tests(white);
             if (value < 0)
                 System.out.println("Black wins.");
@@ -92,7 +96,7 @@ public class PokerHands {
         }
     }
 
-
+	//核心算法
     public static int tests(char[][] cards) {
         char temp;
         int[][] maps = new int[5][13];
